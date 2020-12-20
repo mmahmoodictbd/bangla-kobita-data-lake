@@ -23,7 +23,6 @@ jobs:
       - uses: jeffreytse/jekyll-deploy-action@v0.1.4
         with:
           provider: 'github'
-          token: ${{ secrets.GH_TOKEN }} # It's your Personal Access Token(PAT)
-          repository: ''             # Default is current repository
-          branch: 'master'         # Default is gh-pages for github provider
-          cname: 'kobita.unloadbrain.com' # Default is to not use a cname
+          token: ${{ secrets.GH_TOKEN }}
+          branch: 'master'
+          cname: 'kobita.unloadbrain.com'
