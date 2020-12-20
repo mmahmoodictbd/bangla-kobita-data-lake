@@ -14,7 +14,6 @@ module JsonView
         json_file.puts(json_item_list.to_json)
         json_file.close
         site.static_files << JsonView::DynamicStaticFile.new(site, site.source, "/generated/", json_item_key + "s.json", "/assets/")
-        # FileUtils.rm_rf('./generated')
       end
 
 
