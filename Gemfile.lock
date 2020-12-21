@@ -73,6 +73,7 @@ GEM
 
 PLATFORMS
   ruby
+  universal-darwin-19
 
 DEPENDENCIES
   jekyll (~> 4.0.0)
@@ -83,4 +84,4 @@ DEPENDENCIES
   wdm (~> 0.1.1)
 
 BUNDLED WITH
-   1.17.2
+   2.2.2
