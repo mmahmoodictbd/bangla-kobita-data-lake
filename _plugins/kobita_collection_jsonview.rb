@@ -1,5 +1,6 @@
 module JsonView
   class Generator < Jekyll::Generator
+
     def generate(site)
       jsons = {}
       site.collections["kobita"].docs.each do |doc|
@@ -15,7 +16,6 @@ module JsonView
         json_file.close
         site.static_files << JsonView::DynamicStaticFile.new(site, site.source, "/generated/", json_item_key + "s.json", "/assets/")
       end
-
 
     end
 
