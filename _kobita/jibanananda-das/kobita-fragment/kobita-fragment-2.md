@@ -1,5 +1,6 @@
 ---
-title: Jibanananda Das
+title: জীবন
+author: জীবনানন্দ দাশ
 post_type: kobita-fragment
 categories: []
 tags: [jibanananda-das]
