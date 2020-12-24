@@ -9,10 +9,10 @@ module RandomKobitaFragmentJsonView
         end
       end
 
-      json_file = create_file("./generated/random_kobita", "json")
+      json_file = create_file("./generated/random-kobita", "json")
       json_file.puts(docs.sample.to_json)
       json_file.close
-      site.static_files << Common::DynamicStaticFile.new(site, site.source, "/generated/", "random_kobita.json", "/assets/")
+      site.static_files << Common::DynamicStaticFile.new(site, site.source, "/generated/", "random-kobita.json", "/assets/")
 
     end
 
