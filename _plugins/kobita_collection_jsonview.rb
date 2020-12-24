@@ -1,4 +1,4 @@
-module JsonView
+module KobitaCollectionJsonView
   class Generator < Jekyll::Generator
 
     def generate(site)
@@ -14,7 +14,7 @@ module JsonView
         json_file = create_file("./generated/" + json_item_key + "s", "json")
         json_file.puts(json_item_list.to_json)
         json_file.close
-        site.static_files << JsonView::DynamicStaticFile.new(site, site.source, "/generated/", json_item_key + "s.json", "/assets/")
+        site.static_files << Common::DynamicStaticFile.new(site, site.source, "/generated/", json_item_key + "s.json", "/assets/")
       end
 
     end
@@ -28,18 +28,6 @@ module JsonView
 
       path << ".#{extension}"
       File.new(path, 'w')
-    end
-  end
-
-  class DynamicStaticFile < Jekyll::StaticFile
-    def initialize(site, base, dir, name, dest)
-      super(site, base, dir, name)
-      @name = name
-      @dest = dest
-    end
-    def destination(dest)
-      @destination ||= {}
-      @destination[@dest] ||= @site.in_dest_dir(@dest, Jekyll::URL.unescape_path(url))
     end
   end
 
